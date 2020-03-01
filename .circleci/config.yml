@@ -10,10 +10,10 @@ jobs:
     <<: *defaults
     steps:
       - checkout
-
       - run:
           name: Run build and tests
           command: ./gradlew build test
+
 
 workflows:
   version: 2
