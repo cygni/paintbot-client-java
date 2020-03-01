@@ -1,0 +1,22 @@
+version: 2
+
+defaults: &defaults
+  working_directory: ~/code
+  docker:
+    - image: circleci/openjdk:11
+
+jobs:
+  build:
+    <<: *defaults
+    steps:
+      - checkout
+
+      - run:
+          name: Run build and tests
+          command: ./gradlew build test
+
+workflows:
+  version: 2
+  build-test:
+    jobs:
+      - build
