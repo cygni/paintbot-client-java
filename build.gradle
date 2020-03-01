@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+configurations.all {
+    // check for updates every build
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        url "https://snakebot-maven-repo.appspot.com"
+    }
+}
+
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+dependencies {
+    implementation(group: 'se.cygni.paintbot', name: 'client-util', version: '0.1.21')
+    implementation(group: 'se.cygni.paintbot', name: 'client', version: '0.1.21')
+    implementation(group: 'se.cygni.paintbot', name: 'api', version: '0.1.21')
+}
+
+
+task run(type:JavaExec) {
+    main = 'se.cygni.paintbot.SimplePaintbotPlayer'
+    classpath = sourceSets.main.runtimeClasspath
+}
