@@ -1,4 +1,4 @@
-# paintbot-client-java
+# Paintbot client in Java
 
 This a Paintbot Client written in Java 11.
 
