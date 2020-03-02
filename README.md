@@ -1,6 +1,6 @@
 # Paintbot client in Java
 
-This a Paintbot Client written in Java 11.
+This is a Paintbot Client written in Java 11.
 
 ## Requirements
 
