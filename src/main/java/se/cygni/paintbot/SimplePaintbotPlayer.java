@@ -29,7 +29,7 @@ public class SimplePaintbotPlayer extends BasePaintbotClient {
     private static final boolean AUTO_START_GAME = true;
 
     // Personalise your game ...
-    private static final String SERVER_NAME = "ecs-load-balancer-168404476.eu-west-1.elb.amazonaws.com"; //"paintbot.cygni.se";
+    private static final String SERVER_NAME = "server.paintbot.cygni.se";
     private static final int SERVER_PORT = 80;
 
     private static final GameMode GAME_MODE = GameMode.TRAINING;
