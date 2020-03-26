@@ -6,7 +6,7 @@ This is a Paintbot Client written in Java 11.
 
 * Java JDK >= 11
 * Gradle
-* Paintbot Server (local or remote)
+* Paintbot Server (local or remote, there's one running by Cygni so no worries ;) )
 
 ## Installation
 
@@ -30,7 +30,7 @@ To run your client:
 
 ## Implementation
 
-There is only one class in this project, have a look at SimplePaintbotPlayer.java. The main method to start in looks like this:
+There is only one class in this project, have a look at SimplePaintbotPlayer.java. The method to start in looks like this:
 
 ```java
 @Override
@@ -44,4 +44,7 @@ public void onMapUpdate(MapUpdateEvent mapUpdateEvent) {
 }
 ```
 
-For every MapUpdateEvent received your are expected to reply with a CharacterAction (UP, DOWN, LEFT, RIGHT or EXPLODE). 
+For every MapUpdateEvent received your are expected to reply with a CharacterAction (UP, DOWN, LEFT, RIGHT, STAY or EXPLODE). 
+
+### Help
+There's a utility class with nifty methods to help you out. Take a look at `MapUtil` and what it offers

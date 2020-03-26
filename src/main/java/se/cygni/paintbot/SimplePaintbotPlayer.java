@@ -33,7 +33,7 @@ public class SimplePaintbotPlayer extends BasePaintbotClient {
     private static final int SERVER_PORT = 80;
 
     private static final GameMode GAME_MODE = GameMode.TRAINING;
-    private static final String BOT_NAME = "The Simple Painter";
+    private static final String BOT_NAME = "The Simple Painter " + (int) (Math.random() * 1000) ;
 
     // Set to false if you don't want the game world printed every game tick.
     private static final boolean ANSI_PRINTER_ACTIVE = false;
@@ -54,7 +54,7 @@ public class SimplePaintbotPlayer extends BasePaintbotClient {
     }
 
     /**
-     * The Snake client will continue to run ...
+     * The Paintbot client will continue to run ...
      * : in TRAINING mode, until the single game ends.
      * : in TOURNAMENT mode, until the server tells us its all over.
      */
@@ -97,7 +97,7 @@ public class SimplePaintbotPlayer extends BasePaintbotClient {
         }
 
         Random r = new Random();
-        CharacterAction chosenAction = CharacterAction.DOWN;
+        CharacterAction chosenAction = CharacterAction.STAY;
 
         // Choose a random direction
         if (!actions.isEmpty()) {
