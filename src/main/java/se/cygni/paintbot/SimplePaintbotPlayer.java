@@ -14,12 +14,12 @@ import se.cygni.paintbot.api.response.PlayerRegistered;
 import se.cygni.paintbot.api.util.GameSettingsUtils;
 import se.cygni.paintbot.client.AnsiPrinter;
 import se.cygni.paintbot.client.BasePaintbotClient;
-import se.cygni.paintbot.client.MapUtil;
+import se.cygni.paintbot.client.MapUtility;
+import se.cygni.paintbot.client.MapUtilityImpl;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.stream.Stream;
 
 public class SimplePaintbotPlayer extends BasePaintbotClient {
 
@@ -77,10 +77,11 @@ public class SimplePaintbotPlayer extends BasePaintbotClient {
 
     @Override
     public void onMapUpdate(MapUpdateEvent mapUpdateEvent) {
+        // Do your implementation here! (or at least start from here, entry point for updates)
         ansiPrinter.printMap(mapUpdateEvent);
 
         // MapUtil contains lot's of useful methods for querying the map!
-        MapUtil mapUtil = new MapUtil(mapUpdateEvent.getMap(), getPlayerId());
+        MapUtility mapUtil = new MapUtilityImpl(mapUpdateEvent.getMap(), getPlayerId());
 
         List<CharacterAction> actions = new ArrayList<>();
 

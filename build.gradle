@@ -16,14 +16,17 @@ repositories {
     }
 }
 
+ext {
+    paintbotVersion = '0.1.22'
+}
 
 sourceCompatibility = 11
 targetCompatibility = 11
 
 dependencies {
-    implementation(group: 'se.cygni.paintbot', name: 'client-util', version: '0.1.21')
-    implementation(group: 'se.cygni.paintbot', name: 'client', version: '0.1.21')
-    implementation(group: 'se.cygni.paintbot', name: 'api', version: '0.1.21')
+    implementation(group: 'se.cygni.paintbot', name: 'client-util', version: "$paintbotVersion")
+    implementation(group: 'se.cygni.paintbot', name: 'client', version: "$paintbotVersion")
+    implementation(group: 'se.cygni.paintbot', name: 'api', version: "$paintbotVersion")
 }
 
 

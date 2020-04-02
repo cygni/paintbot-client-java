@@ -10,10 +10,11 @@
         </encoder>
     </appender>
 
-    <logger name="se" level="INFO"/>
-    <root level="INFO">
-        <appender-ref ref="STDOUT"/>
-    </root>
+    <!-- Uncomment to add debug logging for the base client <logger name="se.cygni.paintbot.client;" level="DEBUG"/> -->
+   <logger name="se" level="INFO"/>
+   <root level="INFO">
+       <appender-ref ref="STDOUT"/>
+   </root>
 
 </configuration>
 

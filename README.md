@@ -1,6 +1,10 @@
 # Paintbot client in Java
 
-This is a Paintbot Client written in Java 11.
+This is a Paintbot Client written in Java 11. 
+
+For more information about what Paintbot is, see: https://paintbot.cygni.se/
+
+For running your own server see [Paintbot Server Repository](https://github.com/cygni/paintbot)
 
 ## Requirements
 
