@@ -52,3 +52,9 @@ For every MapUpdateEvent received your are expected to reply with a CharacterAct
 
 ### Help
 There's a utility class with nifty methods to help you out. Take a look at `MapUtil` and what it offers
+
+### Pitfalls
+
+Beware the common mishaps:
+
+- If two bots try to move to the same empty space, they will collide and stun each other. Once the stun ends, they risk doing the same thing again. And again, and again. Don't be the bot who runs into another bot the whole game!
