@@ -29,6 +29,7 @@ public class SimplePaintbotPlayer extends BasePaintbotClient {
     private static final boolean AUTO_START_GAME = true;
 
     // Personalise your game ...
+    private static final String SERVER_PROTOCOL = "wss";
     private static final String SERVER_NAME = "server.paintbot.cygni.se";
     private static final int SERVER_PORT = 80;
 
@@ -174,6 +175,11 @@ public class SimplePaintbotPlayer extends BasePaintbotClient {
     @Override
     public String getName() {
         return BOT_NAME;
+    }
+
+    @Override
+    public String getProtocol() {
+        return SERVER_PROTOCOL;
     }
 
     @Override
